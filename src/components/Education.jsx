@@ -51,7 +51,9 @@ export const Education = () => {
                   "Computer Program Design", 
                   "Data Structures",
                   "Discrete Structures", 
-                  "Technical Writing"
+                  "Technical Writing",
+                  "Engineering Statstics",
+                  
                 ].map((course, index) => (
                   <span 
                     key={index} 
@@ -110,7 +112,15 @@ export const Education = () => {
                 {
                   name: "Texas Instrument Scholarship",
                   icon: "🏆"
-                }
+                },
+                {
+                  name: "Outstanding Undergraduate Teaching Assistant",
+                  icon: "🏆"
+                },
+                {
+                  name: "3x Deans List",
+                  icon: "🏆"
+                },
               ].map((award, index) => (
                 <div 
                   key={index} 

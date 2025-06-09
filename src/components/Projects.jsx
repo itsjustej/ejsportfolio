@@ -40,7 +40,24 @@ export const Projects = () => {
         github: "#",
         demo: "#"
       }
-    }
+    },
+    {
+      id: 3,
+      title: "Visa Data Analytics Hackathon (React & Node.js)",
+      description: "Won 1st place in the Visa Data Analytics Hackathon by implementing machine learning to customize a customers rewards based on their previous purchases.",
+      image: "Visa.png",
+      techStack: ["JavaScript", "Python", "Machine Learning"],
+      category: "app",
+      details: [
+        "The Machine Learning algorithm recognized that this person likes to travel, and pays for things in 2... It deduces this person is more than likely in a relationship and gives rewards that are appealing for date spots.",
+        "Applied machine learning to analyze spending data from 10,000+ mock users and recommend personalized rewards.",
+        "Delivered a full-stack solution in under 24 hours, earning top honors for innovation, UX, and real-world impact."
+      ],
+      links: {
+        github: "https://github.com/itsjustej/VisaDataScience",
+        demo: "https://visarewardsplus.netlify.app/"
+      }
+    },
   ];
 
   const filteredProjects = activeTab === 'all' 

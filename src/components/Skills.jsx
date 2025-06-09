@@ -6,6 +6,7 @@ export const Skills = () => {
     { name: 'C++', level: 95 },
     { name: 'JavaScript', level: 70 },
     { name: 'Python', level: 75 },
+    { name: 'Machine Learning', level: 58}
   ];
 
   const frameWorks = [
