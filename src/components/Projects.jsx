@@ -30,7 +30,7 @@ export const Projects = () => {
       title: "Intramural Sports Stat Tracker",
       description: "A Java application designed to track and analyze statistics for university intramural sports, with data visualization for flag football and basketball.",
       image: "profile.png",
-      techStack: ["React", "Firebase", "Statistics"],
+      techStack: ["React", "JavaScript", "Firebase", "Statistics"],
       category: "app",
       details: [
         "Developed an application before an allotted deadline in Java designed to track and analyze statistics for university intramural sports, projected to serve over 100 users.",
@@ -43,10 +43,10 @@ export const Projects = () => {
     },
     {
       id: 3,
-      title: "Visa Data Analytics Hackathon (React & Node.js)",
+      title: "Visa Data Analytics Hackathon",
       description: "Won 1st place in the Visa Data Analytics Hackathon by implementing machine learning to customize a customers rewards based on their previous purchases.",
       image: "Visa.png",
-      techStack: ["JavaScript", "Python", "Machine Learning"],
+      techStack: ["JavaScript", "Machine Learning", "React", "Node.Js"],
       category: "app",
       details: [
         "The Machine Learning algorithm recognized that this person likes to travel, and pays for things in 2... It deduces this person is more than likely in a relationship and gives rewards that are appealing for date spots.",
