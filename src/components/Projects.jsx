@@ -58,6 +58,23 @@ export const Projects = () => {
         demo: "https://visarewardsplus.netlify.app/"
       }
     },
+    {
+      id: 4,
+      title: "EverLovingCare Website",
+      description: "A responsive website for a residential care facility, built with React and Tailwind CSS. Highlights services, job openings, and contact options with a professional, accessible design.",
+      image: "ELC.png",
+      techStack: ["JavaScript", "React", "Node.Js"],
+      category: "app",
+      details: [
+        "A full-stack, responsive website built to showcase and support a licensed residential care facility.",
+        "Features include animated service listings, job application details, and a dynamic contact form powered by EmailJS.",
+        "Designed with React and Tailwind CSS uses a sleek dark theme with accessible UX/UI and mobile-first responsiveness."
+      ],
+      links: {
+        github: "https://github.com/itsjustej/EverLovingCare",
+        demo: "https://everlovingcare.netlify.app/"
+      }
+    },
   ];
 
   const filteredProjects = activeTab === 'all' 
