@@ -27,17 +27,18 @@ export const Projects = () => {
     },
     {
       id: 2,
-      title: "Intramural Sports Stat Tracker",
-      description: "A Java application designed to track and analyze statistics for university intramural sports, with data visualization for flag football and basketball.",
-      image: "profile.png",
-      techStack: ["React", "JavaScript", "Firebase", "Statistics"],
+      title: "Intramural Basketball Stat Tracker",
+      description: "A React application designed to track and analyze statistics for university intramural sports, with data visualization for basketball. Will soon be upgraded so AI can track the stats for us",
+      image: "StatTracker.png",
+      techStack: ["React", "JavaScript", "SQL", "Node.js"],
       category: "app",
       details: [
-        "Developed an application before an allotted deadline in Java designed to track and analyze statistics for university intramural sports, projected to serve over 100 users.",
-        "Incorporated advanced data visualization techniques to present statistics in an accessible and engaging manner, improving user engagement by 167%."
+        "Engineered a full-stack stat tracking platform with live scorekeeping, play-by-play logs, automated plus/minus tracking, and real-time updates across devices.",
+        "Implemented a React-based UI optimized for fast in-game interaction, including substitution modals, follow-up action prompts, and dynamic player cards.",
+        "Built a Node.js backend with structured APIs for players, teams, and games, enabling persistent storage, advanced stat calculations, and scalable multi-team support."
       ],
       links: {
-        github: "#",
+        github: "https://github.com/itsjustej/StatTracker",
         demo: "#"
       }
     },
@@ -75,6 +76,23 @@ export const Projects = () => {
         demo: "https://everlovingcare.netlify.app/"
       }
     },
+    {
+      id: 5,
+      title: "Gate City Gigs",
+      description: "A full-stack web application built in under 48 hours for the BeSmart Hackathon, designed to connect local gig workers with high-demand micro-jobs across Greensboro. The platform integrates AWS for backend hosting and deployment, and leverages the Google Maps API to visualize nearby gigs, enhance job discovery, and power location-based matching between workers and employers.",
+      image: "GCG.png",
+      techStack: ["JavaScript", "React", "Node.Js", "AWS"],
+      category: "app",
+      details: [
+        "Developed a responsive React and Node.js platform that matches gig workers to jobs using location data and real-time filtering.",
+        "Integrated AWS EC2 for full-stack deployment and the Google Maps API for interactive gig visualization and distance-based recommendations.",
+        "Built employer and worker dashboards enabling gig posting, job browsing, and streamlined communication for quick community labor support."
+      ],
+      links: {
+        github: "https://github.com/itsjustej/BE_SMART_HACKATHON",
+        demo: "https://youtu.be/Q4b6pATznEM"
+      }
+    },
   ];
 
   const filteredProjects = activeTab === 'all' 
@@ -96,7 +114,7 @@ export const Projects = () => {
         </div>
         {/* Section Header */}
         
-        {/* Project Filter Tabs */}
+        {/* Project Filter Tabs
         <div className="flex justify-center mb-8">
           <div className="inline-flex rounded-md shadow-sm">
             <button
@@ -130,7 +148,7 @@ export const Projects = () => {
               Applications
             </button>
           </div>
-        </div>
+        </div> */}
         
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">

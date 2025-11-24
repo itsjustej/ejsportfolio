@@ -1,8 +1,8 @@
 import React from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, MapPin, Calendar } from 'lucide-react';
 
 export const Experience = () => {
-  const experiences = [ // Holds all the various Timeline events
+  const experiences = [
     {
       title: "Software Engineer",
       company: "GE Vernova",
@@ -11,7 +11,7 @@ export const Experience = () => {
       description: [
         "Placeholder - 12 weeks",
       ],
-      current: true
+      current: false
     },
     {
       title: "Front End Developer",
@@ -33,7 +33,7 @@ export const Experience = () => {
         "Served as the bridge between students and staff, led weekly review sessions, hosted extra office hours, and supported over 100 students in mastering foundational CS concepts in java.",
         "Developed supplemental materials and practice problems to improve student engagement and performance increasing average test scores by 8%.",
         "Built a pipeline from the classroom to my Rooted In Code SIG by mentoring high-potential students and connecting them to hands-on project opportunities.",
-        "Selected for TA role after academic excellence and faculty recommendation; Excellence recognized with “Outstanding Undergraduate TA” award.",
+        "Selected for TA role after academic excellence and faculty recommendation; Excellence recognized with \"Outstanding Undergraduate TA\" award.",
       ],
       current: true
     },
@@ -62,17 +62,6 @@ export const Experience = () => {
       current: false
     },
     {
-      title: "Team Leader - 4th Place",
-      company: "AUC Game Jam",
-      location: "Atlanta, GA",
-      period: "April 2024",
-      description: [
-        "Oversaw a team for 24 hours to assemble a game based on a given prompt. Listened to team ideas, distributed tasks, and integrated contributions into a cohesive final project.",
-        "Pitched the game to a panel of judges, emphasizing strengths while strategically downplaying weaknesses"
-      ],
-      current: false
-    },
-    {
       title: "Scholar",
       company: "Codehouse Scholars Initiative",
       location: "Atlanta, GA",
@@ -86,64 +75,81 @@ export const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 md:py-24 bg-white">
-        {/* Section Header */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8"> 
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Experience</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            My professional journey and practical experience in the tech and design industry.
+    <section id="experience" className="py-20 bg-gradient-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Experience
+          </h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            My professional journey in technology, design, and education
           </p>
         </div>
-        
-        <div className="relative max-w-4xl mx-auto mt-16">
-          {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-200"></div>
-          
-          {/* Experience Items */}
-          {experiences.map((exp, index) => (
-            <div 
-              key={index} 
-              className={`relative md:flex items-start mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-            //   the above line is responsible for the events showing up on different halfs of the array
-            >
-              
-              {/* Content */}
-              <div className={`md:w-1/2 p-6 bg-white rounded-lg shadow-md border-l-4 transform transition-transform hover:scale-105 
-                ${exp.current ? 'border-indigo-600' : 'border-teal-500'} ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
-                    {/* Hoverable and the outer border for the timeline event */}
-                <div className="flex items-center mb-4">
-                    {/* Vertically centers the icon and the text in the same row */}
 
-                  <Briefcase size={20} className={exp.current ? 'text-indigo-600' : 'text-teal-500'} />
-                  <h3 className="ml-2 text-xl font-semibold text-slate-800">{exp.title}</h3>
+        <div className="relative">
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500"></div>
+
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div key={index} className="relative pl-0 md:pl-20">
+                <div
+                  className={`absolute left-6 top-8 w-5 h-5 rounded-full border-4 border-white shadow-lg hidden md:block ${
+                    exp.current
+                      ? 'bg-blue-600 ring-4 ring-blue-100'
+                      : 'bg-slate-400'
+                  }`}
+                  style={{ transform: 'translateX(-10px)' }}
+                ></div>
+
+                <div
+                  className={`group relative bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:border-slate-300 ${
+                    exp.current ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
+                  }`}
+                >
+                  {exp.current && (
+                    <div className="absolute -top-3 left-6 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                      Current
+                    </div>
+                  )}
+
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                    <div className="flex-1 mb-4 md:mb-0">
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        {exp.title}
+                      </h3>
+                      <div className="flex items-center text-slate-700 font-medium mb-2">
+                        <Briefcase size={18} className="mr-2 text-cyan-600 flex-shrink-0" />
+                        <span>{exp.company}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-start md:items-end space-y-2 text-sm md:text-base">
+                      <div className="flex items-center text-slate-600">
+                        <Calendar size={16} className="mr-2 text-slate-400 flex-shrink-0" />
+                        <span className="font-medium">{exp.period}</span>
+                      </div>
+                      <div className="flex items-center text-slate-600">
+                        <MapPin size={16} className="mr-2 text-slate-400 flex-shrink-0" />
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
                   </div>
 
-
-                <h4 className="text-lg font-medium text-slate-700 mb-1">{exp.company}</h4>
-
-                <div className="flex items-center mb-4 text-slate-500">
-                  <Calendar size={16} className="mr-1" />
-                  <span className="mr-2">{exp.period}</span> • <span className="ml-2">{exp.location}</span>
+                  <div className="border-t border-slate-100 pt-4">
+                    <ul className="space-y-3">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="flex items-start text-slate-700 leading-relaxed">
+                          <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="text-sm md:text-base">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-
-                <ul className="space-y-2">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="flex">
-                      <span className="mr-2 text-indigo-600">•</span>
-                      <span className="text-slate-600">{item}</span>
-                    </li>
-                    // Creates a vertical list
-                    // Iterates over the description array inside each exp object
-                    // Each bullet is wrapped in a flex container so the bullet and text align horizontally
-
-
-                  ))}
-                </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

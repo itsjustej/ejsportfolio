@@ -37,7 +37,7 @@ export const Education = () => {
             
             <div className="mt-6">
               <div className="bg-indigo-50 rounded-lg p-4 inline-block">
-                <span className="font-medium text-indigo-700">GPA: 3.4</span>
+                <span className="font-medium text-indigo-700">GPA: 3.5</span>
               </div>
             </div>
             
@@ -53,6 +53,12 @@ export const Education = () => {
                   "Discrete Structures", 
                   "Technical Writing",
                   "Engineering Statstics",
+                  "Database Design",
+                  "Differential Equations",
+                  "Social Implications of Computing",
+                  "Internet Systems",
+                  "Programming Languages",
+                  "Analysis Of Algorithms"
                   
                 ].map((course, index) => (
                   <span 
