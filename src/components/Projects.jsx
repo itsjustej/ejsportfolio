@@ -39,7 +39,7 @@ export const Projects = () => {
       ],
       links: {
         github: "https://github.com/itsjustej/StatTracker",
-        demo: "#"
+        demo: "https://www.youtube.com/watch?v=uD8mLNQwiI0"
       }
     },
     {
